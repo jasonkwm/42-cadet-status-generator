@@ -120,14 +120,14 @@ def generate_sheet():
         user["status"] = ""
         user["level"] = int(cadet["cursus_users"][1]["level"])
         if cadet['cursus_users'][1]['grade'] == "Member":
-            user["blackholed_at"] = current_time
+            user["blackholed_date"] = current_time
         else:
-            user["blackholed_at"] = datetime.strptime(cadet["cursus_users"][1]["blackholed_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
-        if (user["blackholed_at"] < current_time and cadet['cursus_users'][1]['grade'] != "Member"):
-            user["blackholed_at"] = user["blackholed_at"].strftime("%d/%m/%Y")
+            user["blackholed_date"] = datetime.strptime(cadet["cursus_users"][1]["blackholed_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
+        if (user["blackholed_date"] < current_time and cadet['cursus_users'][1]['grade'] != "Member"):
+            user["blackholed_date"] = user["blackholed_date"].strftime("%d/%m/%Y")
             user["status"] = "DROPPED OUT"
         elif cadet['cursus_users'][1]['grade'] == "Member":
-            user["blackholed_at"] = ""
+            user["blackholed_date"] = ""
             user["status"] = "SPECIALISATION"
         else:
             user["blackholed_at"] = ""
