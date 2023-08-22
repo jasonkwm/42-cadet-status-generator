@@ -22,12 +22,13 @@ If you are zhen or someone that does not have any prior programming background o
         python main.py
 
 #### Output :
- - The end product is a spreadsheet in `.xlsx` format that contains:  
-   - `name` = name of cadet  
+ - The end product is a spreadsheet in `.xlsx` format that contains:
+   - `intra_id` = intra login id
+   - `name` = name of cadet
    - `period_from` = Cadets start date  
    - `level` = Cadet level  
    - `status` = 'DROPPED OUT'. 'CORE PROG', 'SPECIALISATION'  
-   - `blackhole` = Date of cadet being absorbed by blackhole
+   - `blackholed_date` = Date of cadet being absorbed by blackhole
 
 - This program also generate 3 other `.json` file:  
    - `user_42kl.json` = All 42KL Users
