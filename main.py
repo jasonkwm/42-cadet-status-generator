@@ -114,22 +114,23 @@ def generate_sheet():
         user = {}
         # Example of adding new fields
         # user["YOUR CUSTOM FIELD NAME"] = cadet["JSON_FIELD(CHECK README BOTTOM)"]
+        user["intra_id"] = cadet["login"]
         user["name"] = cadet["cursus_users"][1]["user"]["usual_full_name"].upper()
         user["period_from"] =  datetime.strptime(cadet["cursus_users"][1]["begin_at"], "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%d/%m/%Y")
         user["status"] = ""
         user["level"] = int(cadet["cursus_users"][1]["level"])
         if cadet['cursus_users'][1]['grade'] == "Member":
-            user["blackhole"] = current_time
+            user["blackholed_at"] = current_time
         else:
-            user["blackhole"] = datetime.strptime(cadet["cursus_users"][1]["blackholed_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
-        if (user["blackhole"] < current_time and cadet['cursus_users'][1]['grade'] != "Member"):
-            user["blackhole"] = user["blackhole"].strftime("%d/%m/%Y")
+            user["blackholed_at"] = datetime.strptime(cadet["cursus_users"][1]["blackholed_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
+        if (user["blackholed_at"] < current_time and cadet['cursus_users'][1]['grade'] != "Member"):
+            user["blackholed_at"] = user["blackholed_at"].strftime("%d/%m/%Y")
             user["status"] = "DROPPED OUT"
         elif cadet['cursus_users'][1]['grade'] == "Member":
-            user["blackhole"] = ""
+            user["blackholed_at"] = ""
             user["status"] = "SPECIALISATION"
         else:
-            user["blackhole"] = ""
+            user["blackholed_at"] = ""
             user["status"] = "CORE PROG"
         data.append(user)
     df = pd.DataFrame.from_dict(data)
