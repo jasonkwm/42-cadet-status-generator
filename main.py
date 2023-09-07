@@ -5,7 +5,9 @@ import time
 import json
 import pandas as pd
 
+# Enable ANSI coloring for Windows 
 os.system('color')
+
 print("\033[33m=========ZHEN SCRIPT========\033[0m     \033[31mby jakoh, bshamsid\033[0m")
 print("\033[33mTo run this script you must first insert your UID & your SECRET key below \033[0m")
 print("\033[33mYou can find your secret at \033[4;33mhttps://profile.intra.42.fr/oauth/applications\033[0;33m under 'YOUR APPLICATION'\033[0m")
