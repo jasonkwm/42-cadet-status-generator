@@ -103,6 +103,14 @@ def filter_cadets():
         f.write(json.dumps(non_passed_users))
     print("\033[0;33mCADETS FILTERED\033[0m")
 
+# handle diffrent date time format due to intra not using 2 diffrent format
+# Thanks intra
+def getDatetime(dateString):
+    if "Z" in dateString:
+        return datetime.strptime(dateString, "%Y-%m-%dT%H:%M:%S.%fZ")
+    else:
+        return datetime.strptime(dateString, "%Y-%m-%dT%H:%M:%S.%f%z")
+
 # Now that we have all of the cadets data that we need
 # We loop through all the cadets to get the info that we need
 # name = name of cadet, period_from = Cadets start date, level = Cadet level,
@@ -119,13 +127,13 @@ def generate_sheet():
         # user["YOUR CUSTOM FIELD NAME"] = cadet["JSON_FIELD(CHECK README BOTTOM)"]
         user["intra_id"] = cadet["login"]
         user["name"] = cadet["cursus_users"][1]["user"]["usual_full_name"].upper()
-        user["period_from"] =  datetime.strptime(cadet["cursus_users"][1]["begin_at"], "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%d/%m/%Y")
+        user["period_from"] = getDatetime(cadet["cursus_users"][1]["begin_at"]).strftime("%d/%m/%Y")
         user["status"] = ""
         user["level"] = int(cadet["cursus_users"][1]["level"])
         if cadet['cursus_users'][1]['grade'] == "Member":
             user["blackholed_date"] = current_time
         else:
-            user["blackholed_date"] = datetime.strptime(cadet["cursus_users"][1]["blackholed_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
+            user["blackholed_date"] = getDatetime(cadet["cursus_users"][1]["blackholed_at"])
         if (user["blackholed_date"] < current_time and cadet['cursus_users'][1]['grade'] != "Member"):
             user["blackholed_date"] = user["blackholed_date"].strftime("%d/%m/%Y")
             user["status"] = "DROPPED OUT"
@@ -133,9 +141,15 @@ def generate_sheet():
             user["blackholed_date"] = ""
             user["status"] = "SPECIALISATION"
         else:
-            user["blackholed_at"] = ""
+            user["days_till_blockhole"] = (user["blackholed_date"] - current_time).days
+            user["blackholed_date"] = ""
             user["status"] = "CORE PROG"
         data.append(user)
+    
+    # output to JSON file
+    # with open("sample.json", "w") as outfile:
+    #     outfile.write(json.dumps(data))
+    
     df = pd.DataFrame.from_dict(data)
     df["period_from"] = pd.to_datetime(df["period_from"], format="%d/%m/%Y")
     df.sort_values(by=['period_from','name'], inplace=True)
