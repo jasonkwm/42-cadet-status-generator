@@ -20,15 +20,15 @@
     }
   },
   "staff?": false,
-  "correction_point": 34,
+  "correction_point": 52,
   "pool_month": "february",
   "pool_year": "2022",
-  "location": "u80z03s05",
-  "wallet": 35,
-  "anonymize_date": "2025-12-20T00:00:00.000+08:00",
-  "data_erasure_date": "2025-12-20T00:00:00.000+08:00",
+  "location": null,
+  "wallet": 135,
+  "anonymize_date": "2026-10-07T00:00:00.000+08:00",
+  "data_erasure_date": "2026-10-07T00:00:00.000+08:00",
   "created_at": "2022-01-28T02:10:01.055Z",
-  "updated_at": "2022-12-20T11:50:32.946Z",
+  "updated_at": "2023-10-06T12:14:24.661Z",
   "alumnized_at": null,
   "alumni?": false,
   "active?": true,
@@ -94,15 +94,15 @@
           }
         },
         "staff?": false,
-        "correction_point": 34,
+        "correction_point": 52,
         "pool_month": "february",
         "pool_year": "2022",
-        "location": "u80z03s05",
-        "wallet": 35,
-        "anonymize_date": "2025-12-20T00:00:00.000+08:00",
-        "data_erasure_date": "2025-12-20T00:00:00.000+08:00",
+        "location": null,
+        "wallet": 135,
+        "anonymize_date": "2026-10-07T00:00:00.000+08:00",
+        "data_erasure_date": "2026-10-07T00:00:00.000+08:00",
         "created_at": "2022-01-28T02:10:01.055Z",
-        "updated_at": "2022-12-20T11:50:32.946Z",
+        "updated_at": "2023-10-06T12:14:24.661Z",
         "alumnized_at": null,
         "alumni?": false,
         "active?": true
@@ -117,17 +117,32 @@
     },
     {
       "grade": "Learner",
-      "level": 4.09,
+      "level": 5.5600000000000005,
       "skills": [
+        {
+          "id": 6,
+          "name": "Web",
+          "level": 6.28
+        },
+        {
+          "id": 3,
+          "name": "Rigor",
+          "level": 4.52
+        },
         {
           "id": 2,
           "name": "Imperative programming",
           "level": 4.13
         },
         {
-          "id": 3,
-          "name": "Rigor",
-          "level": 3.57
+          "id": 7,
+          "name": "Group & interpersonal",
+          "level": 3.86
+        },
+        {
+          "id": 1,
+          "name": "Algorithms & AI",
+          "level": 3.37
         },
         {
           "id": 4,
@@ -135,14 +150,14 @@
           "level": 3.17
         },
         {
-          "id": 1,
-          "name": "Algorithms & AI",
-          "level": 3.16
-        },
-        {
           "id": 5,
           "name": "Graphics",
           "level": 1.63
+        },
+        {
+          "id": 17,
+          "name": "Object-oriented programming",
+          "level": 1.35
         },
         {
           "id": 10,
@@ -150,7 +165,7 @@
           "level": 1.33
         }
       ],
-      "blackholed_at": "2023-06-09T00:00:00.000Z",
+      "blackholed_at": "2024-01-26T00:00:00.000Z",
       "id": 164028,
       "begin_at": "2022-04-04T00:00:00.000Z",
       "end_at": null,
@@ -180,15 +195,15 @@
           }
         },
         "staff?": false,
-        "correction_point": 34,
+        "correction_point": 52,
         "pool_month": "february",
         "pool_year": "2022",
-        "location": "u80z03s05",
-        "wallet": 35,
-        "anonymize_date": "2025-12-20T00:00:00.000+08:00",
-        "data_erasure_date": "2025-12-20T00:00:00.000+08:00",
+        "location": null,
+        "wallet": 135,
+        "anonymize_date": "2026-10-07T00:00:00.000+08:00",
+        "data_erasure_date": "2026-10-07T00:00:00.000+08:00",
         "created_at": "2022-01-28T02:10:01.055Z",
-        "updated_at": "2022-12-20T11:50:32.946Z",
+        "updated_at": "2023-10-06T12:14:24.661Z",
         "alumnized_at": null,
         "alumni?": false,
         "active?": true
@@ -204,12 +219,232 @@
   ],
   "projects_users": [
     {
-      "id": 2720739,
-      "occurrence": 2,
+      "id": 3315505,
+      "occurrence": 0,
+      "final_mark": null,
+      "status": "waiting_for_correction",
+      "validated?": null,
+      "current_team_id": 5177236,
+      "project": {
+        "id": 2267,
+        "name": "Python for Data Science",
+        "slug": "python-for-data-science",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": null,
+      "marked": false,
+      "retriable_at": null,
+      "created_at": "2023-09-15T09:20:57.069Z",
+      "updated_at": "2023-10-06T01:00:27.581Z"
+    },
+    {
+      "id": 3318696,
+      "occurrence": 1,
       "final_mark": 0,
       "status": "finished",
       "validated?": false,
-      "current_team_id": 4500143,
+      "current_team_id": 5195263,
+      "project": {
+        "id": 2270,
+        "name": "Python - 2 - DataTable",
+        "slug": "python-2-datatable",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-09-21T04:11:45.579Z",
+      "marked": true,
+      "retriable_at": "2023-09-24T08:56:34.287Z",
+      "created_at": "2023-09-18T04:11:00.258Z",
+      "updated_at": "2023-09-24T08:56:34.302Z"
+    },
+    {
+      "id": 3318695,
+      "occurrence": 1,
+      "final_mark": 92,
+      "status": "finished",
+      "validated?": true,
+      "current_team_id": 5194815,
+      "project": {
+        "id": 2269,
+        "name": "Python - 1 - Array",
+        "slug": "python-1-array",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-09-21T08:56:37.920Z",
+      "marked": true,
+      "retriable_at": "2023-09-21T08:56:38.047Z",
+      "created_at": "2023-09-18T04:10:59.648Z",
+      "updated_at": "2023-09-21T08:56:38.060Z"
+    },
+    {
+      "id": 3318698,
+      "occurrence": 0,
+      "final_mark": 0,
+      "status": "finished",
+      "validated?": false,
+      "current_team_id": 5182610,
+      "project": {
+        "id": 2272,
+        "name": "Python - 4 - Dod",
+        "slug": "python-4-dod",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-09-21T04:11:48.404Z",
+      "marked": true,
+      "retriable_at": "2023-09-21T04:11:48.964Z",
+      "created_at": "2023-09-18T04:11:01.455Z",
+      "updated_at": "2023-09-21T04:11:49.302Z"
+    },
+    {
+      "id": 3318697,
+      "occurrence": 0,
+      "final_mark": 0,
+      "status": "finished",
+      "validated?": false,
+      "current_team_id": 5182609,
+      "project": {
+        "id": 2271,
+        "name": "Python - 3 - OOP",
+        "slug": "python-3-oop",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-09-21T04:11:45.790Z",
+      "marked": true,
+      "retriable_at": "2023-09-21T04:11:46.100Z",
+      "created_at": "2023-09-18T04:11:00.890Z",
+      "updated_at": "2023-09-21T04:11:46.247Z"
+    },
+    {
+      "id": 3318520,
+      "occurrence": 2,
+      "final_mark": 100,
+      "status": "finished",
+      "validated?": true,
+      "current_team_id": 5187135,
+      "project": {
+        "id": 2268,
+        "name": "Python - 0 - Starting",
+        "slug": "python-0-starting",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-09-19T13:44:15.285Z",
+      "marked": true,
+      "retriable_at": "2023-09-19T13:44:15.638Z",
+      "created_at": "2023-09-18T01:31:05.899Z",
+      "updated_at": "2023-09-21T01:31:28.212Z"
+    },
+    {
+      "id": 3305799,
+      "occurrence": 0,
+      "final_mark": null,
+      "status": "in_progress",
+      "validated?": null,
+      "current_team_id": 5162573,
+      "project": {
+        "id": 2007,
+        "name": "NetPractice",
+        "slug": "netpractice",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": null,
+      "marked": false,
+      "retriable_at": null,
+      "created_at": "2023-09-12T08:07:11.833Z",
+      "updated_at": "2023-09-12T08:08:54.096Z"
+    },
+    {
+      "id": 3227938,
+      "occurrence": 0,
+      "final_mark": null,
+      "status": "creating_group",
+      "validated?": null,
+      "current_team_id": 5041157,
+      "project": {
+        "id": 1326,
+        "name": "cub3d",
+        "slug": "cub3d",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": null,
+      "marked": false,
+      "retriable_at": null,
+      "created_at": "2023-08-09T05:46:27.093Z",
+      "updated_at": "2023-08-09T05:46:27.093Z"
+    },
+    {
+      "id": 3086438,
+      "occurrence": 0,
+      "final_mark": 100,
+      "status": "finished",
+      "validated?": true,
+      "current_team_id": 4835630,
+      "project": {
+        "id": 1337,
+        "name": "ft_transcendence",
+        "slug": "ft_transcendence",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-05-08T14:16:14.352Z",
+      "marked": true,
+      "retriable_at": "2023-05-11T14:16:14.507Z",
+      "created_at": "2023-05-08T08:23:23.879Z",
+      "updated_at": "2023-05-08T14:16:14.525Z"
+    },
+    {
+      "id": 2932415,
+      "occurrence": 0,
+      "final_mark": 100,
+      "status": "finished",
+      "validated?": true,
+      "current_team_id": 4618917,
+      "project": {
+        "id": 1322,
+        "name": "Exam Rank 04",
+        "slug": "exam-rank-04",
+        "parent_id": null
+      },
+      "cursus_ids": [
+        21
+      ],
+      "marked_at": "2023-01-13T08:13:17.479Z",
+      "marked": true,
+      "retriable_at": "2023-01-13T08:13:17.553Z",
+      "created_at": "2023-01-12T06:00:15.699Z",
+      "updated_at": "2023-01-13T08:13:32.254Z"
+    },
+    {
+      "id": 2720739,
+      "occurrence": 3,
+      "final_mark": 100,
+      "status": "finished",
+      "validated?": true,
+      "current_team_id": 4608318,
       "project": {
         "id": 1321,
         "name": "Exam Rank 03",
@@ -219,11 +454,11 @@
       "cursus_ids": [
         21
       ],
-      "marked_at": "2022-08-12T06:31:42.571Z",
+      "marked_at": "2022-12-29T06:43:23.774Z",
       "marked": true,
-      "retriable_at": "2022-12-16T06:30:25.076Z",
+      "retriable_at": "2022-12-29T06:43:23.860Z",
       "created_at": "2022-08-12T06:30:37.767Z",
-      "updated_at": "2022-12-16T09:30:32.320Z"
+      "updated_at": "2022-12-29T09:30:33.965Z"
     },
     {
       "id": 2663959,
@@ -834,7 +1069,7 @@
       "id": 41,
       "name": "All work and no play makes Jack a dull boy",
       "description": "Logged for a total of 90 hours over a week.",
-      "tier": "easy",
+      "tier": "none",
       "kind": "scolarity",
       "visible": true,
       "image": "/uploads/achievement/image/41/SCO001.svg",
@@ -862,6 +1097,17 @@
       "image": "/uploads/achievement/image/18/PRO005.svg",
       "nbr_of_success": 3,
       "users_url": "https://api.intra.42.fr/v2/achievements/18/users"
+    },
+    {
+      "id": 19,
+      "name": "Bonus Hunter",
+      "description": "Validated 10 projects with the maximum score.",
+      "tier": "hard",
+      "kind": "project",
+      "visible": true,
+      "image": "/uploads/achievement/image/19/PRO005.svg",
+      "nbr_of_success": 10,
+      "users_url": "https://api.intra.42.fr/v2/achievements/19/users"
     },
     {
       "id": 4,
@@ -943,7 +1189,7 @@
     {
       "id": 45,
       "name": "Home is where the code is",
-      "description": "S'\u00eatre logu\u00e9 dans le m\u00eame cluster un mois de suite.",
+      "description": "Logged into the same cluster for a month in a row",
       "tier": "none",
       "kind": "scolarity",
       "visible": true,
@@ -974,8 +1220,19 @@
       "users_url": "https://api.intra.42.fr/v2/achievements/84/users"
     },
     {
+      "id": 36,
+      "name": "It's a rich man's world",
+      "description": "Collected 100 wallet points.",
+      "tier": "none",
+      "kind": "social",
+      "visible": true,
+      "image": "/uploads/achievement/image/36/SOC004.svg",
+      "nbr_of_success": 100,
+      "users_url": "https://api.intra.42.fr/v2/achievements/36/users"
+    },
+    {
       "id": 12,
-      "name": "Perfectionnist",
+      "name": "Perfectionist",
       "description": "Validated and redid 1 project.",
       "tier": "none",
       "kind": "project",
@@ -1009,7 +1266,7 @@
     {
       "id": 218,
       "name": "Welcome, Learner !",
-      "description": "Tu as r\u00e9ussi ta piscine C. Bienvenue \u00e0 42 !",
+      "description": "You passed the C Piscine. Welcome at 42!",
       "tier": "none",
       "kind": "project",
       "visible": true,
@@ -1046,9 +1303,9 @@
         "name": "English",
         "identifier": "en",
         "created_at": "2015-04-14T16:07:38.122Z",
-        "updated_at": "2022-12-12T14:07:02.671Z"
+        "updated_at": "2023-09-25T12:28:14.089Z"
       },
-      "users_count": 749,
+      "users_count": 1106,
       "vogsphere_id": 26,
       "country": "Malaysia",
       "address": "Sunway FutureX",
