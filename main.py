@@ -130,6 +130,7 @@ def generate_sheet():
         user["period_from"] = getDatetime(cadet["cursus_users"][1]["begin_at"]).strftime("%d/%m/%Y")
         user["status"] = ""
         user["level"] = int(cadet["cursus_users"][1]["level"])
+
         if cadet['cursus_users'][1]['grade'] == "Member":
             user["blackholed_date"] = current_time
         else:
@@ -144,6 +145,11 @@ def generate_sheet():
             user["days_till_blockhole"] = (user["blackholed_date"] - current_time).days
             user["blackholed_date"] = ""
             user["status"] = "CORE PROG"
+            for project in cadet['projects_users']:
+                if (project["marked_at"] and project['cursus_ids'][0] is 21 and "Exam" not in project["project"]["name"]):
+                    user["since_last_submission"] = (current_time - getDatetime(project["marked_at"])).days
+                    break
+            
         data.append(user)
     
     # output to JSON file
